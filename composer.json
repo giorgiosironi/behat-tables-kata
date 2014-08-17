@@ -1,0 +1,13 @@
+{
+    "name": "giorgio/behat-tables-kata",
+    "description": "Experimenting with Behat alternative forms of specification",
+    "require": {
+        "behat/behat": "3.x"
+    },
+    "authors": [
+        {
+            "name": "Giorgio Sironi",
+            "email": "info@giorgiosironi.com"
+        }
+    ]
+}

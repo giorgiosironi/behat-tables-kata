@@ -12,3 +12,8 @@ Feature: FizzBuzz kata
         Given the input is 6
         When it is converted
         Then it becomes Fizz
+
+    Scenario: 2 is itself
+        Given the input is 2
+        When it is converted
+        Then it becomes 2

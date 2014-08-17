@@ -37,11 +37,11 @@ class FeatureContext implements SnippetAcceptingContext
     }
 
     /**
-     * @Then it becomes Fizz
+     * @Then it becomes :output
      */
-    public function itBecomesFizz()
+    public function itBecomes($output)
     {
-        if ($this->fizzbuzz->value() != 'Fizz') {
+        if ($this->fizzbuzz->value() != $output) {
             throw new RuntimeException();
         }
     }

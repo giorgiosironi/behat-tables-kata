@@ -4,6 +4,9 @@
     "require": {
         "behat/behat": "3.x"
     },
+    "autoload": {
+        "classmap": ["src/"]
+    },
     "authors": [
         {
             "name": "Giorgio Sironi",

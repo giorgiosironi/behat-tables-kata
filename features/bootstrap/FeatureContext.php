@@ -35,4 +35,33 @@ class FeatureContext implements SnippetAcceptingContext
             throw new RuntimeException("Expected $output but it was {$this->fizzbuzz->value()}");
         }
     }
+
+    /**
+     * @Given the following items are in the cart:
+     */
+    public function theFollowingItemsAreInTheCart(TableNode $table)
+    {
+        $this->cart = new Cart();
+        foreach ($table->getHash() as $item) {
+            $this->cart->add($item['name'], $item['price']);
+        }
+    }
+
+    /**
+     * @When I check out
+     */
+    public function iCheckOut()
+    {
+    }
+
+    /**
+     * @Then I pay :total
+     */
+    public function iPay($total)
+    {
+        $total = (int) $total;
+        if ($this->cart->total() !== $total) {
+            throw new RuntimeException("Expected $total but it was {$this->cart->total()}");
+        }
+    }
 }

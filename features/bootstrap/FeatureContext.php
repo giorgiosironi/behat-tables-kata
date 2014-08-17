@@ -42,7 +42,7 @@ class FeatureContext implements SnippetAcceptingContext
     public function itBecomes($output)
     {
         if ($this->fizzbuzz->value() != $output) {
-            throw new RuntimeException();
+            throw new RuntimeException("Expected $output but it was {$this->fizzbuzz->value()}");
         }
     }
 }

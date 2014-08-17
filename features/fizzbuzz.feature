@@ -3,17 +3,13 @@ Feature: FizzBuzz kata
     As a programmer
     I should be able to convert numbers with FizzBuzz
 
-    Scenario: 3 is Fizz
-        Given the input is 3
+    Scenario Outline: conversion of numbers
+        Given the input is <input>
         When it is converted
-        Then it becomes Fizz
+        Then it becomes <output>
 
-    Scenario: 6 is Fizz too because it's multiple of 3
-        Given the input is 6
-        When it is converted
-        Then it becomes Fizz
-
-    Scenario: 2 is itself
-        Given the input is 2
-        When it is converted
-        Then it becomes 2
+        Examples:
+            | input | output |
+            | 2     | 2      |
+            | 3     | Fizz   |
+            | 6     | Fizz   |

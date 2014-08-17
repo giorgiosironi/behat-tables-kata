@@ -11,16 +11,6 @@ use Behat\Behat\Tester\Exception\PendingException;
 class FeatureContext implements SnippetAcceptingContext
 {
     /**
-     * Initializes context.
-     *
-     * Every scenario gets its own context object.
-     * You can also pass arbitrary arguments to the context constructor through behat.yml.
-     */
-    public function __construct()
-    {
-    }
-
-    /**
      * @Given the input is :input
      */
     public function theInputIs($input)
